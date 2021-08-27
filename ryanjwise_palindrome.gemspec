@@ -1,17 +1,18 @@
 # frozen_string_literal: true
-lib = File.expand_path("../lib", __FILE__)
+
+lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require_relative "lib/ryanjwise_palindrome/version"
+require_relative 'lib/ryanjwise_palindrome/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "ryanjwise_palindrome"
+  spec.name          = 'ryanjwise_palindrome'
   spec.version       = RyanjwisePalindrome::VERSION
-  spec.authors       = ["Ryan Wise"]
-  spec.email         = ["ryan.wise@zendesk.com"]
+  spec.authors       = ['Ryan Wise']
+  spec.email         = ['ryan.wise@zendesk.com']
 
-  spec.summary       = "Small Pallindrome Checker by Michael Hartyl in his learn enough series"
-  spec.homepage      = "https://github.com/z3n-ryanwise/ryanjwise_palindrome"
-  spec.required_ruby_version = ">= 2.7.4"
+  spec.summary       = 'Small Pallindrome Checker by Michael Hartyl in his learn enough series'
+  spec.homepage      = 'https://github.com/z3n-ryanwise/ryanjwise_palindrome'
+  spec.required_ruby_version = '>= 2.7.4'
 
   # spec.metadata["allowed_push_host"] = "https://rubygems.org/"
 
@@ -24,9 +25,9 @@ Gem::Specification.new do |spec|
   spec.files = Dir.chdir(File.expand_path(__dir__)) do
     `git ls-files -z`.split("\x0").reject { |f| f.match(%r{\A(?:test|spec|features)/}) }
   end
-  spec.bindir        = "exe"
+  spec.bindir        = 'exe'
   spec.executables   = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
-  spec.require_paths = ["lib"]
+  spec.require_paths = ['lib']
 
   # Uncomment to register a new dependency of your gem
   # spec.add_dependency "example-gem", "~> 1.0"
